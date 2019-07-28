@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        int n1,opc;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("1 (Raíz quadrada)\n2 (Raíz cúbica)\n3 (Expoente)\n4 (Potência)");
+        System.out.print("EScolha uma das opções ");
+        opc = teclado.nextInt();
+        System.out.println("Opção escolhida: " +opc);
+        System.out.print("-> ");
+        n1 = teclado.nextInt();
+        
+        switch (opc){
+            case 1:
+                System.out.println("Raíz quadrada de " +n1+ " -> " +Math.sqrt(n1));
+                break;
+                case 2:
+                    System.out.println("Raíz cúbica de " +n1+ " -> " +Math.cbrt(n1));
+                    break;
+                    case 3:
+                        System.out.println("Expoente de " +n1+ " -> " +Math.exp(n1));
+                    break;
+                    case 4:
+                        System.out.print("DIGITE MAIS UM NÚMERO ");
+                        int n2 = teclado.nextInt();
+                        System.out.println("Potência de " +n1+ " elevado a " +n2+ " -> " +Math.pow(n1,n2));
+                        break;
+                    default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+        }
+        
+    }
+}
