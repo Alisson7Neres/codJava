@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class NumeroAleatorios {
 	private enum Resultado {ACERTOU, ERROU};
 	public static void main(String[] args) {
+			
+			int acertou = 0;
+			int errou = 0;
+		
 		while (true) {
 			try {
 				// Criando objeto da classe SecureRandom
@@ -23,11 +27,15 @@ public class NumeroAleatorios {
 				if(tcl == SecureRandom) {
 					System.out.println(Resultado.ACERTOU + " "+SecureRandom);
 					System.out.println("############################");
+					acertou++;
 				} else {
 					System.out.println(Resultado.ERROU + " " +SecureRandom);
 					System.out.println("############################");
+					errou++;
 				} if(tcl == 0) {
 					System.out.println("Programa finalizado");
+					System.out.println("Você acertou = " + acertou);
+		        		System.out.println("Você errou = " + errou);
 					System.exit(0);
 					// Irá finalizar a entrada de dados
 					input.close();
